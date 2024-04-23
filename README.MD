@@ -255,4 +255,86 @@ An example of a final class is the String class.
 
 If a class is final, the methods in it don't need to be marked as final.
 
+### MATH METHODS
+Math.random()
+Math.abs()
+Math.round()
+Math.min()
+Math.max
+
+
+Wrapping a primitive
+Java provides wrapper classes to wrap primitives when we want to put them in collections such as an Arraylist
+When we need to treat primitives like objects
+
+These are:
+
+Integer
+Short
+Byte
+Long
+Boolean
+Character
+Float
+Double
+
+They are fully spelled out and begin with caps
+```
+//when wrapping a value
+
+int i = 5;
+Integer j = new Integer(i);
+
+//When unwrapping a value
+
+int k = j.intValue();
+
+//all wrappers have the Value()
+//charValue()
+//booleanValue()
+//longValue()
+//shortValue();
+//byteValue();
+//doubleValue()
+//floatValue()
+```
+
+With newer versions of Java *****autoboxing***** does this for us automatically.
+It automatically converts primitives to objects for us
+```
+ArrayList<Float> numbers = new ArrayList<Float>();
+
+//we are able to directly add primitives to the array above because the compiler autoboxes them into objects
+numbers.add(1.08f);
+numbers.add(20.59f);
+
+```
+
+Wrapper classes have static methods  such as parse()
+```
+String s = "2";
+
+int x = Integer.parseInt(s);
+//this converts the string to a primitive value
+//this method only works with a string that can be parsed as a number
+//otherwise when we try to parse words into numbers a NmberFormatException error is thrown at runtime
+
+
+```
+
+We can also convert a primitive number to a String
+```
+
+//this can be achieved in two ways.
+
+
+float f = 23.8f;
+String newString = "" + f;
+//whenever anything is added to a string it is Stringified
+
+
+//the second way is by using the toString()
+String forcedString = Float.toString(f);
+
+```
 
